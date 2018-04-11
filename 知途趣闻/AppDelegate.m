@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "HZJTabBarController.h"
+#import "MMDrawerController.h"
+#import "HZJLeftController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//   HZJLeftController *leftC = [[HZJLeftController alloc] init];
+    HZJTabBarController *tabBarC = [[HZJTabBarController alloc] init];
+//    MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:tabBarC leftDrawerViewController:leftC];
+    self.window.rootViewController = tabBarC;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
